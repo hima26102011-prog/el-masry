@@ -104,6 +104,10 @@ function initStudentProfile() {
       localStorage.setItem("elmasry_student_profile", JSON.stringify(AppState.student));
       updateUserInterfaceForLoggedStudent();
       
+      if (typeof gtag === "function") {
+        gtag("event", "sign_up", { method: "LocalProfile" });
+      }
+
       loginModal.classList.add("hidden");
       loginModal.classList.remove("flex");
 
@@ -511,6 +515,13 @@ function initBookingForm() {
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/${TEACHER_PHONE}?text=${encodedMessage}`;
 
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", {
+        grade: studentGrade,
+        branch: attendanceMode
+      });
+    }
+
     // Show celebration and redirect
     showToast("جاري توجيهك إلى الواتساب لإرسال تفاصيل الحجز مباشرة...", "success");
     playNotificationSound();
@@ -612,6 +623,9 @@ ${AppState.student.parentPhone ? `رقم ولي الأمر: ${AppState.student.p
     }
 
     const url = `https://wa.me/${TEACHER_PHONE}?text=${encodeURIComponent(message)}`;
+    if (typeof gtag === "function") {
+      gtag("event", "contact", { method: "WhatsApp", button_source: source });
+    }
     window.open(url, "_blank");
   }
 
