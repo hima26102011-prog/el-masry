@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أ. محمد المصري | أستاذ العلوم والعلوم المتكاملة - العلوم والمصري</title>
+  <meta name="description" content="المنصة التعليمية الرسمية للأستاذ محمد المصري - مدرس العلوم للمرحلة الإعدادية والعلوم المتكاملة للمرحلة الثانوية بطنطا (مقر المعتصم مع الحلو، مقر الامبابي مع رشدي، مقر عثمان مع يوسف الصديق). شرح مبسط، تجارب معملية، وتفوق مضمون.">
+  <meta name="keywords" content="محمد المصري, علوم, علوم متكاملة, إعدادي, ثانوي, طنطا, مقر المعتصم مع الحلو, مقر الامبابي مع رشدي, مقر عثمان مع يوسف الصديق, مدرس علوم طنطا">
+  <meta name="theme-color" content="#040814">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="أ. محمد المصري | العلوم والعلوم المتكاملة">
+  <meta property="og:description" content="معاً لتحقيق الأفضل - أقوى شرح لمناهج العلوم والعلوم المتكاملة">
+  <meta property="og:image" content="teacher.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Alexandria & Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              950: '#040814',
+              900: '#0a1329',
+              800: '#0f1d3d',
+              700: '#1d4ed8',
+              600: '#2563eb',
+              500: '#3b82f6',
+            },
+            gold: {
+              300: '#fde047',
+              400: '#facc15',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          },
+          fontFamily: {
+            heading: ['Alexandria', 'sans-serif'],
+            body: ['Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-royal-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- Real-time Golden/Cyan Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Interactive Spotlight Mouse Effect -->
+  <div id="mouse-spotlight"></div>
+
+  <!-- Dynamic Science Molecules Canvas Background -->
+  <canvas id="science-bg-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
+
+  <!-- Top Notification Bar -->
+  <div class="relative z-30 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-royal-950 py-2 px-4 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2">
+    <i data-lucide="sparkles" class="w-4 h-4 animate-spin-slow"></i>
+    <span>مرحباً بكم في منصة "العلوم والمصري" - باب الحجز مفتوح الآن للعام الدراسي الجديد بمقرات طنطا المعتمدة وأونلاين!</span>
+    <span class="hidden md:inline-block bg-royal-950 text-amber-400 px-2 py-0.5 rounded text-xs mr-2">الأماكن محدودة</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand / Teacher Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <img src="teacher.jpg" alt="أ. محمد المصري" class="w-full h-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80'">
+          </div>
+          <div class="text-right">
+            <div class="flex items-center gap-1.5">
+              <span class="text-lg sm:text-xl font-black font-heading text-white tracking-tight">أ. محمد المصري</span>
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            </div>
+            <p class="text-xs text-amber-400 font-semibold flex items-center gap-1">
+              <span>العلوم والمصري</span>
+              <span class="text-slate-400">• طنطا</span>
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6">
+          <a href="#hero" class="nav-link text-sm font-semibold text-slate-300 hover:text-amber-400 transition-colors">الرئيسية</a>
+          <a href="#about" class="nav-link text-sm font-semibold text-slate-300 hover:text-amber-400 transition-colors">عن المدرس</a>
+          <a href="#courses" class="nav-link text-sm font-semibold text-slate-300 hover:text-amber-400 transition-colors">الكورسات</a>
+          <a href="#journey" class="nav-link text-sm font-semibold text-slate-300 hover:text-amber-400 transition-colors">رحلة التفوق</a>
+          <a href="#location" class="nav-link text-sm font-semibold text-slate-300 hover:text-amber-400 transition-colors">المقرات والفروع</a>
+          <a href="#faq" class="nav-link text-sm font-semibold text-slate-300 hover:text-amber-400 transition-colors">الأسئلة الشائعة</a>
+        </nav>
+
+        <!-- Navbar Actions (Login / WhatsApp / Booking) -->
+        <div class="hidden sm:flex items-center gap-3">
+          <!-- Student Login / Profile Button -->
+          <button id="open-login-btn" class="glass-card px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-amber-300 flex items-center gap-2 border border-slate-700/60 hover:border-amber-500/50 transition-all">
+            <i data-lucide="user" class="w-4 h-4 text-amber-400"></i>
+            <span>تسجيل الطالب</span>
+          </button>
+
+          <!-- Book Seat Button -->
+          <a href="#booking-section" class="btn-gold px-5 py-2.5 rounded-xl text-xs sm:text-sm flex items-center gap-2 font-black font-heading shadow-lg shadow-amber-500/20">
+            <i data-lucide="calendar-check" class="w-4 h-4"></i>
+            <span>احجز مقعدك</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button id="open-login-btn-mobile" onclick="document.getElementById('open-login-btn').click()" class="glass-card p-2 rounded-lg text-amber-400 border border-slate-700">
+            <i data-lucide="user" class="w-5 h-5"></i>
+          </button>
+          <button id="mobile-menu-toggle" aria-label="فتح القائمة" class="p-2 rounded-xl glass-card text-slate-300 hover:text-white border border-slate-700">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-header border-t border-slate-800 px-6 py-5 space-y-4">
+      <nav class="flex flex-col space-y-3 text-right">
+        <a href="#hero" class="nav-link text-base font-semibold text-slate-200 hover:text-amber-400 py-1 flex items-center gap-2">
+          <i data-lucide="home" class="w-4 h-4 text-amber-400"></i>
+          <span>الرئيسية</span>
+        </a>
+        <a href="#about" class="nav-link text-base font-semibold text-slate-200 hover:text-amber-400 py-1 flex items-center gap-2">
+          <i data-lucide="user-check" class="w-4 h-4 text-amber-400"></i>
+          <span>عن أ. محمد المصري</span>
+        </a>
+        <a href="#courses" class="nav-link text-base font-semibold text-slate-200 hover:text-amber-400 py-1 flex items-center gap-2">
+          <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i>
+          <span>المراحل والكورسات</span>
+        </a>
+        <a href="#journey" class="nav-link text-base font-semibold text-slate-200 hover:text-amber-400 py-1 flex items-center gap-2">
+          <i data-lucide="compass" class="w-4 h-4 text-amber-400"></i>
+          <span>رحلة الطالب للتفوق</span>
+        </a>
+        <a href="#location" class="nav-link text-base font-semibold text-slate-200 hover:text-amber-400 py-1 flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+          <span>المقرات والفروع بطنطا</span>
+        </a>
+        <a href="#faq" class="nav-link text-base font-semibold text-slate-200 hover:text-amber-400 py-1 flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i>
+          <span>الأسئلة الشائعة</span>
+        </a>
+      </nav>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2.5">
+        <a href="#booking-section" class="btn-gold w-full py-3 rounded-xl text-center text-sm font-bold flex items-center justify-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>الانتقال لنموذج الحجز المباشر</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="relative z-10">
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      <!-- Glow ambient lights -->
+      <div class="absolute top-1/4 right-5 w-72 h-72 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-10 left-5 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Right: Text Content & Actions (RTL) -->
+          <div class="lg:col-span-7 text-right space-y-6">
+            
+            <!-- Top Badges -->
+            <div class="inline-flex flex-wrap items-center gap-2.5">
+              <span class="badge-gold px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="atom" class="w-4 h-4 text-amber-400 animate-spin-slow"></i>
+                <span>شعارنا: معاً لتحقيق الأفضل</span>
+              </span>
+              <span class="bg-royal-800/80 border border-blue-500/30 text-blue-300 px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5">
+                <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+                <span>أوائل الشهادة الإعدادية والثانوية بطنطا</span>
+              </span>
+            </div>
+
+            <!-- Main Heading with Golden accents -->
+            <div class="space-y-2">
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading leading-tight text-white">
+                <span>أ. محمد</span>
+                <span class="gold-gradient-text">المصري</span>
+              </h1>
+              <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-200 font-heading">
+                أستاذ العلوم للمرحلة الإعدادية والعلوم المتكاملة للمرحلة الثانوية
+              </h2>
+            </div>
+
+            <!-- Value Proposition Description -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              رحلة تعليمية فريدة تحوّل مادة العلوم من مجرد حفظ وتلقين إلى متعة استكشاف وتجارب عملية مشوقة. نفهم الظاهرة العلمية خطوة بخطوة، ونضمن التفوق والدرجات النهائية بأحدث أساليب الشرح التفاعلي وأقوى بنوك الأسئلة.
+            </p>
+
+            <!-- Key Feature Bullets -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-center gap-2.5 text-sm text-slate-200">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </span>
+                <span>تجارب معملية عملية حية أمام الطالب</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-slate-200">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </span>
+                <span>شرح مبسط لمنهج "العلوم المتكاملة" الجديد</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-slate-200">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </span>
+                <span>متابعة أسبوعية واختبارات دورية مع ولي الأمر</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-sm text-slate-200">
+                <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </span>
+                <span>مذكرات ألوان تلخص أهم المفاهيم والأسئلة</span>
+              </div>
+            </div>
+
+            <!-- Call to Actions (WhatsApp & Booking Smooth Scroll) -->
+            <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              
+              <!-- Direct WhatsApp Button (Teacher Direct Number) -->
+              <button id="hero-whatsapp-btn" class="btn-whatsapp px-7 py-4 rounded-2xl font-black font-heading text-base flex items-center justify-center gap-3 cursor-pointer group shadow-xl">
+                <svg class="w-6 h-6 fill-white group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <div class="text-right">
+                  <span class="block text-sm font-bold">تواصل واتساب مباشر</span>
+                  <span class="block text-xs font-black opacity-95 dir-ltr text-left tracking-wider">+20 100 813 5310</span>
+                </div>
+              </button>
+
+              <!-- Booking Smooth Scroll Button -->
+              <a href="#booking-section" class="btn-gold px-7 py-4 rounded-2xl font-black font-heading text-base flex items-center justify-center gap-2.5 shadow-xl group">
+                <i data-lucide="check-square" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                <span>احجز مقعدك بالسنتر / أونلاين</span>
+              </a>
+
+            </div>
+
+            <!-- Current Student Badge (If logged in) -->
+            <div id="student-welcome-badge" class="hidden glass-card p-3 rounded-xl border border-amber-500/40 inline-flex items-center gap-2.5 text-xs text-amber-200">
+              <i data-lucide="badge-check" class="w-4 h-4 text-amber-400"></i>
+              <span>مرحباً بك مجدداً يا بطل العلوم: <strong id="student-name-display" class="text-white underline"></strong></span>
+            </div>
+
+          </div>
+
+          <!-- Hero Left: Teacher Showcase Card with Image (The User's Photo) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-md">
+              
+              <!-- Ambient Glow ring around the image -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-amber-500/30 via-blue-600/40 to-amber-500/30 rounded-3xl blur-xl opacity-75 animate-pulse"></div>
+
+              <!-- Main Card Container -->
+              <div class="relative glass-card rounded-3xl p-3 sm:p-4 border border-amber-400/40 shadow-2xl overflow-hidden group">
+                
+                <!-- Inner Image Frame -->
+                <div class="relative w-full aspect-[3/4.2] rounded-2xl overflow-hidden bg-slate-900 border border-slate-700/60 shadow-inner">
+                  <img 
+                    src="teacher.jpg" 
+                    alt="أ. محمد المصري - أستاذ العلوم والعلوم المتكاملة" 
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="eager"
+                    onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'"
+                  >
+
+                  <!-- Gradient Bottom Overlay -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-royal-950 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+
+                  <!-- Overlay Tag: العلوم والمصري -->
+                  <div class="absolute bottom-4 inset-x-4 glass-card p-3.5 rounded-xl border border-amber-400/30 text-center">
+                    <div class="flex items-center justify-between text-xs text-amber-300 font-bold mb-1">
+                      <span class="flex items-center gap-1">
+                        <i data-lucide="flask-conical" class="w-3.5 h-3.5"></i>
+                        <span>العلوم والمصري</span>
+                      </span>
+                      <span class="bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded">معاً للقمة</span>
+                    </div>
+                    <p class="text-sm font-black font-heading text-white">أ. محمد المصري</p>
+                    <p class="text-xs text-slate-300">أستاذ العلوم والمرحلة الثانوية</p>
+                  </div>
+                </div>
+
+                <!-- Floating Interactive Badge 1 (Top Left) -->
+                <div class="absolute top-7 -left-3 glass-card px-3.5 py-2 rounded-xl border border-amber-400/50 shadow-xl flex items-center gap-2 animate-float">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                    <i data-lucide="microscope" class="w-4 h-4"></i>
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-xs font-bold text-white">تجارب معملية</span>
+                    <span class="block text-[10px] text-amber-400">تطبيقية تفاعلية</span>
+                  </div>
+                </div>
+
+                <!-- Floating Interactive Badge 2 (Right Side) -->
+                <div class="absolute bottom-28 -right-3 glass-card px-3.5 py-2 rounded-xl border border-blue-400/50 shadow-xl flex items-center gap-2 animate-float" style="animation-delay: -3s;">
+                  <div class="w-8 h-8 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center">
+                    <i data-lucide="medal" class="w-4 h-4 text-amber-400"></i>
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-xs font-bold text-white">+12 عاماً</span>
+                    <span class="block text-[10px] text-slate-300">خبرة وتفوق</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4 Quick Glowing Stats Cards with Live Counter Attributes -->
+        <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          
+          <div class="glass-card stat-glow-card p-5 sm:p-6 rounded-3xl text-center border-t-2 border-t-amber-400 hover:border-amber-400/80 transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-center justify-center gap-1 text-3xl sm:text-4xl font-black font-heading text-amber-400 mb-1">
+              <span>+</span>
+              <span class="stat-counter" data-target="1500">1500</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-slate-100">طالب وطالبة متفوقين</div>
+            <div class="text-[11px] text-amber-300/80 mt-1">بمدارس طنطا والإدارات التعليمية</div>
+          </div>
+
+          <div class="glass-card stat-glow-card p-5 sm:p-6 rounded-3xl text-center border-t-2 border-t-cyan-400 hover:border-cyan-400/80 transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-center justify-center gap-1 text-3xl sm:text-4xl font-black font-heading text-cyan-400 mb-1">
+              <span class="stat-counter" data-target="3">3</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-slate-100">مقرات معتمدة في قلب طنطا</div>
+            <div class="text-[11px] text-cyan-300/80 mt-1">المعتصم • الإمبابي • عثمان</div>
+          </div>
+
+          <div class="glass-card stat-glow-card p-5 sm:p-6 rounded-3xl text-center border-t-2 border-t-blue-500 hover:border-blue-400/80 transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-center justify-center gap-1 text-3xl sm:text-4xl font-black font-heading text-blue-400 mb-1">
+              <span>+</span>
+              <span class="stat-counter" data-target="12">12</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-slate-100">عاماً من الخبرة والتميز</div>
+            <div class="text-[11px] text-blue-300/80 mt-1">في تدريس وتبسيط مناهج العلوم</div>
+          </div>
+
+          <div class="glass-card stat-glow-card p-5 sm:p-6 rounded-3xl text-center border-t-2 border-t-emerald-400 hover:border-emerald-400/80 transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-center justify-center gap-1 text-3xl sm:text-4xl font-black font-heading text-emerald-400 mb-1">
+              <span class="stat-counter" data-target="99">99.4</span>
+              <span>%</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-slate-100">نسبة تفوق ودرجات نهائية</div>
+            <div class="text-[11px] text-emerald-300/80 mt-1">ومتابعة أسبوعية دقيقة لكل طالب</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. About Teacher Section (عن المدرس) -->
+    <section id="about" class="py-20 relative bg-royal-900/40 border-y border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-1.5 badge-gold px-3.5 py-1 rounded-full text-xs font-bold">
+            <i data-lucide="user" class="w-3.5 h-3.5"></i>
+            <span>الريادة في تدريس العلوم</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+            من هو <span class="gold-gradient-text">أ. محمد المصري</span>؟
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            معلم خبير كرّس سنوات طويلة لتطوير فلسفة تعليمية حديثة تعتمد على تبسيط العلوم وربطها بالواقع العملي والتكنولوجي، ليصبح الطالب عاشقاً للمادة ومتمكناً من كل فروعها.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Image with Quote -->
+          <div class="lg:col-span-5">
+            <div class="relative glass-card p-4 rounded-3xl border border-slate-700 shadow-2xl">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-900">
+                <img src="teacher.jpg" alt="أ. محمد المصري داخل معمل العلوم" class="w-full h-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'">
+                <div class="absolute inset-0 bg-gradient-to-t from-royal-950/90 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 inset-x-4 p-4 text-center">
+                  <span class="inline-block px-3 py-1 bg-amber-500 text-royal-950 font-black text-xs rounded-full mb-2">مقرات طنطا المعتمدة</span>
+                  <p class="text-white font-extrabold text-sm sm:text-base">"العلوم ليست مادة تُحفظ، بل كونٌ نكتشفه وقوانين نعيشها!"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards Grid -->
+          <div class="lg:col-span-7 space-y-5 text-right">
+            
+            <!-- Card 1 -->
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4 hover:border-amber-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white mb-1.5">أسلوب التبسيط الذكي (Simplification Method)</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  تفكيك أصعب المفاهيم الفيزيائية والكيميائية والبيولوجية إلى قصص ورسوم ومجسمات تفاعلية تجعل المعلومة تثبت في عقل الطالب دون عناء الحفظ المجرد.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4 hover:border-blue-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="flask-round" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white mb-1.5">التجارب المعملية التطبيقية</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  تطبيق قوانين الحركة، التفاعلات الكيميائية، ودراسة الكائنات الحية عبر أدوات وتجارب حية معملية تعزز الفهم العميق وتنمي التفكير العلمي الناقد.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4 hover:border-emerald-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="layers" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white mb-1.5">الريادة في منهج "العلوم المتكاملة" الحديث</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  المواكبة الكاملة لأحدث مقررات وزارة التربية والتعليم للثانوية العامة 2024 - 2026 في مادة العلوم المتكاملة ودمج الكيمياء والفيزياء والأحياء بسلاسة فائقة.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4 hover:border-purple-500/50 transition-all">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white mb-1.5">نظام متابعة صارم وشراكة مع ولي الأمر</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  امتحانات دورية في بداية كل حصة، واجبات مصححة بدقة، وإرسال تقرير شهري تفصيلي لولي الأمر بنقاط القوة والضعف لضمان بقاء الطالب في قمة مستواه.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Courses & Stages Section (المراحل الدراسية والكورسات) -->
+    <section id="courses" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-1.5 badge-gold px-3.5 py-1 rounded-full text-xs font-bold">
+            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+            <span>برامج التأسيس والتفوق</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+            المراحل الدراسية و<span class="gold-gradient-text">الكورسات المتاحة</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base">
+            اختر مرحلتك الدراسية واكتشف تفاصيل الكورس ومميزاته، واحجز مقعدك مباشرة عبر ضغطة زر واحدة.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Card 1: المرحلة الإعدادية -->
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-blue-500/30 flex flex-col justify-between hover:border-amber-400/60 transition-all group">
+            <div class="space-y-6">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-black">
+                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-amber-400 font-bold block">تأسيس & شهادة</span>
+                    <h3 class="text-2xl font-black font-heading text-white">المرحلة الإعدادية</h3>
+                  </div>
+                </div>
+                <span class="badge-gold px-3 py-1 rounded-lg text-xs font-bold">1، 2، 3 إعدادي</span>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                شرح شامل ومتكامل لمناهج مادة العلوم لصفوف المرحلة الإعدادية، مع تركيز خاص ومكثف لطلاب الشهادة الإعدادية لضمان الدرجات النهائية والتأهيل للثانوي العام.
+              </p>
+
+              <!-- Stages Sub-pills -->
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-royal-800 rounded-lg text-xs font-semibold text-slate-200 border border-slate-700">الصف الأول الإعدادي</span>
+                <span class="px-3 py-1 bg-royal-800 rounded-lg text-xs font-semibold text-slate-200 border border-slate-700">الصف الثاني الإعدادي</span>
+                <span class="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-lg text-xs font-bold">الصف الثالث الإعدادي (الشهادة)</span>
+              </div>
+
+              <!-- Course Features List -->
+              <div class="space-y-3 pt-2">
+                <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">مميزات الكورس الإعدادي:</h4>
+                <ul class="space-y-2.5 text-sm text-slate-200">
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                    <span>شرح مبسط لكل درس مدعوم بالرسومات والمجسمات العلمية</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                    <span>تجارب عملية في السنتر وعبر المحاكاة الافتراضية التفاعلية</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                    <span>متابعة دورية أسبوعية وتقارير أداء فورية لولي الأمر</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                    <span>امتحانات دورية إلكترونية وتطبيقية تحاكي امتحانات المديرية</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                    <span>مذكرة "العلوم والمصري" الحصرية شاملة بنك الأسئلة المتوقعة</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Card CTA Action -->
+            <div class="pt-8">
+              <button onclick="selectCourse('المرحلة الإعدادية')" class="btn-royal w-full py-3.5 rounded-xl font-bold font-heading text-sm flex items-center justify-center gap-2 group-hover:bg-blue-600 transition-all">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400"></i>
+                <span>حجز كورس المرحلة الإعدادية</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: المرحلة الثانوية - العلوم المتكاملة -->
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-amber-400/40 relative flex flex-col justify-between hover:border-amber-400 transition-all group">
+            
+            <!-- Popular Badge -->
+            <div class="absolute -top-3.5 right-8 bg-gradient-to-r from-amber-500 to-amber-600 text-royal-950 font-black text-xs px-4 py-1 rounded-full shadow-lg flex items-center gap-1.5">
+              <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+              <span>المنهج الوزاري الحديث 2025/2026</span>
+            </div>
+
+            <div class="space-y-6">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-black">
+                    <i data-lucide="atom" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-amber-400 font-bold block">الصف الأول الثانوي</span>
+                    <h3 class="text-2xl font-black font-heading text-white">العلوم المتكاملة</h3>
+                  </div>
+                </div>
+                <span class="badge-gold px-3 py-1 rounded-lg text-xs font-bold">Integrated Sciences</span>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                منظومة تعليمية متطورة مصممة خصيصاً للمنهج الجديد؛ نربط مفاهيم الكيمياء والفيزياء والأحياء والجيولوجيا في قالب علمي حديث يركز على الفهم العميق والتحليل وحل مشكلات الواقع.
+              </p>
+
+              <!-- Stages Sub-pills -->
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-lg text-xs font-bold">أولى ثانوي عام</span>
+                <span class="px-3 py-1 bg-royal-800 rounded-lg text-xs font-semibold text-slate-200 border border-slate-700">تطبيقات الذكاء البيئي</span>
+                <span class="px-3 py-1 bg-royal-800 rounded-lg text-xs font-semibold text-slate-200 border border-slate-700">نواتج التعلم العليا</span>
+              </div>
+
+              <!-- Course Features List -->
+              <div class="space-y-3 pt-2">
+                <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">مميزات كورس العلوم المتكاملة:</h4>
+                <ul class="space-y-2.5 text-sm text-slate-200">
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                    <span>تفكيك الروابط بين العلوم (كيمياء، فيزياء، أحياء، بيئة) بأسلوب مبسط</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                    <span>تدريب مكثف على أنماط أسئلة التابلت والامتحانات الوزارية الحديثة</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                    <span>ورش عمل وتجارب تطبيقية معملية تكشف أسرار الظواهر الكونية</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                    <span>بنك أسئلة رقمي متاح للطالب للتدريب المستمر في أي وقت</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                    <span>متابعة فردية لمستوى كل طالب لضمان التميز في الثانوية العامة</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Card CTA Action -->
+            <div class="pt-8">
+              <button onclick="selectCourse('العلوم المتكاملة (أولى ثانوي)')" class="btn-gold w-full py-3.5 rounded-xl font-black font-heading text-sm flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>حجز كورس العلوم المتكاملة (ثانوي)</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Excellence & Progress Chart Section (رسم بياني لتصاعد مستوى الطلاب) -->
+    <section id="excellence" class="py-20 relative bg-royal-900/40 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="inline-flex items-center gap-1.5 badge-gold px-3.5 py-1 rounded-full text-xs font-bold">
+            <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+            <span>مؤشرات الأداء والتفوق الحقيقي</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+            لوحة تصاعد مستوى <span class="gold-gradient-text">طلابنا</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            رسم بياني تفاعلي يوضح التحول الملموس في مستوى ودرجات الطلاب منذ انضمامهم للمنصة وحتى حصد الدرجات النهائية في الامتحانات الرسمية.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Chart Container -->
+          <div class="lg:col-span-8 glass-card p-6 sm:p-8 rounded-3xl border border-slate-700/80 shadow-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-4 border-b border-slate-800 gap-2">
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white">معدل درجات الطلاب خلال مراحل العام الدراسي</h3>
+                <p class="text-xs text-slate-400">تطور دقيق يثبت فاعلية نظام الشرح والمتابعة المستمرة</p>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg border border-emerald-500/20 font-bold self-start sm:self-auto">
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                <span>تصاعد مستمر بنسبة +36%</span>
+              </span>
+            </div>
+
+            <!-- Chart Canvas Wrapper -->
+            <div class="chart-wrapper">
+              <canvas id="excellenceChart"></canvas>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between text-xs text-slate-400 gap-2">
+              <span>* البيانات مبنية على إحصائيات درجات الطلاب الفعلية في الاختبارات الشهرية والرسمية.</span>
+              <span class="text-amber-400 font-semibold">منصة العلوم والمصري 2025/2026</span>
+            </div>
+          </div>
+
+          <!-- Progress KPIs / Highlights -->
+          <div class="lg:col-span-4 space-y-4">
+            
+            <div class="glass-card p-5 rounded-2xl border-r-4 border-r-amber-400">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                  <i data-lucide="target" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">التقييم التشخيصي المستمر</h4>
+                  <span class="text-xs text-slate-400">اكتشاف الثغرات ومعالجتها</span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                يبدأ كل طالب بتقييم لتحديد مستواه، ويتم التركيز على نقاط الضعف حتى يصل للإتقان الكامل في كل وحدة دراسية.
+              </p>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl border-r-4 border-r-blue-500">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center">
+                  <i data-lucide="zap" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">الدرجات النهائية مضمونة</h4>
+                  <span class="text-xs text-slate-400">امتحانات مطابقة لمواصفات الوزارة</span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                تدريب متكرر على نماذج امتحانات الإدارات السابقة وأسئلة المستويات العليا يزيل رهبة الامتحان ويضمن التميز.
+              </p>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl border-r-4 border-r-emerald-500">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+                  <i data-lucide="award" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white">تكريم أوائل المنصة</h4>
+                  <span class="text-xs text-slate-400">جوائز تشجيعية وتحفيز مستمر</span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                تكريم دوري للمتفوقين بجميع المقرات وعلى المنصة لتحفيز روح المنافسة الشريفة بين جميع الطلاب.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4.5. Student Journey Section (رحلة الطالب نحو الدرجة النهائية) -->
+    <section id="journey" class="py-20 relative bg-royal-950/60 overflow-hidden border-b border-slate-800">
+      <!-- Glow ambient background -->
+      <div class="absolute -top-40 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-40 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 badge-gold px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold">
+            <i data-lucide="compass" class="w-4 h-4 text-amber-400"></i>
+            <span>منهجية التفوق والدرجة النهائية</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white">
+            رحلة الطالب نحو <span class="gold-cyan-gradient-text">الدرجة النهائية</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            خطة عمل مدروسة من 5 محطات أساسية تضمن تحويل مادة العلوم من مادة حفظ مجرد إلى متعة عقلية ودرجة نهائية مضمونة بإذن الله.
+          </p>
+        </div>
+
+        <!-- 5 Steps Horizontal / Responsive Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+          
+          <!-- Step 1 -->
+          <div class="glass-card journey-node p-6 rounded-3xl border border-slate-700/80 hover:border-amber-400/80 transition-all text-right relative group flex flex-col justify-between hover:-translate-y-2">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="w-10 h-10 rounded-2xl bg-amber-500/20 text-amber-400 font-black text-sm flex items-center justify-center border border-amber-500/40">
+                  01
+                </span>
+                <span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full">المحطة الأولى</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center">
+                <i data-lucide="presentation" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white group-hover:text-amber-400 transition-colors">
+                  الشرح التفاعلي الذكي
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
+                  تفكيك المفاهيم المعقدة بالرسومات التوضيحية وشاشات العرض الذكية داخل القاعة مع سرد قصصي ممتع.
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>فهم عميق بدون تلقين</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="glass-card journey-node p-6 rounded-3xl border border-slate-700/80 hover:border-cyan-400/80 transition-all text-right relative group flex flex-col justify-between hover:-translate-y-2">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="w-10 h-10 rounded-2xl bg-cyan-500/20 text-cyan-400 font-black text-sm flex items-center justify-center border border-cyan-500/40">
+                  02
+                </span>
+                <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-full">المحطة الثانية</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="flask-conical" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white group-hover:text-cyan-400 transition-colors">
+                  التجارب المعملية الحية
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
+                  تطبيق القوانين العلمية والتفاعلات الكيميائية والفيزيائية أمام عين الطالب لترسيخ المعلومة في الذاكرة.
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>معمل متكامل وتطبيق عملي</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card journey-node p-6 rounded-3xl border border-slate-700/80 hover:border-blue-400/80 transition-all text-right relative group flex flex-col justify-between hover:-translate-y-2">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 font-black text-sm flex items-center justify-center border border-blue-500/40">
+                  03
+                </span>
+                <span class="text-xs font-bold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full">المحطة الثالثة</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/15 text-blue-400 flex items-center justify-center">
+                <i data-lucide="book-marked" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white group-hover:text-blue-400 transition-colors">
+                  المذكرة وبنك الأسئلة
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
+                  مذكرة "العلوم والمصري" الحصرية شاملة خلاصة المنهج وتدريبات مكثفة على جميع أشكال أسئلة المديريات.
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>شاملة كل أفكار الامتحانات</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="glass-card journey-node p-6 rounded-3xl border border-slate-700/80 hover:border-emerald-400/80 transition-all text-right relative group flex flex-col justify-between hover:-translate-y-2">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="w-10 h-10 rounded-2xl bg-emerald-500/20 text-emerald-400 font-black text-sm flex items-center justify-center border border-emerald-500/40">
+                  04
+                </span>
+                <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">المحطة الرابعة</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+                <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-white group-hover:text-emerald-400 transition-colors">
+                  الامتحان والمتابعة الفورية
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
+                  كويز أسبوعي وتقييم مستمر مع إرسال تقرير بدرجة الطالب وحضوره إلى ولي الأمر لمتابعة مستمرة ودقيقة.
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>تقرير أسبوعي لولي الأمر</span>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="glass-card journey-node p-6 rounded-3xl border border-amber-400/60 bg-gradient-to-b from-amber-500/10 via-royal-900/60 to-royal-950 hover:border-amber-400 transition-all text-right relative group flex flex-col justify-between hover:-translate-y-2 shadow-xl shadow-amber-500/10">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="w-10 h-10 rounded-2xl bg-amber-500 text-royal-950 font-black text-sm flex items-center justify-center shadow-lg">
+                  05
+                </span>
+                <span class="text-xs font-bold text-amber-300 bg-amber-500/20 px-2.5 py-1 rounded-full">المحطة الختامية</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                <i data-lucide="trophy" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold font-heading text-amber-300">
+                  التكريم والتفوق النهائي
+                </h3>
+                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mt-2">
+                  حصد الدرجة النهائية والاحتفال بأوائل المحافظة وتكريم الطلاب المتميزين بجوائز وشهادات تقدير فخمة.
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-amber-500/30 text-[11px] text-amber-400 font-bold flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>الدرجة النهائية 100% بإذن الله</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Testimonials Section (آراء الطلاب وأولياء الأمور) -->
+    <section id="testimonials" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div class="inline-flex items-center gap-1.5 badge-gold px-3.5 py-1 rounded-full text-xs font-bold">
+            <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+            <span>شهادات نعتز بها</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+            ماذا يقول <span class="gold-gradient-text">الطلاب وأولياء الأمور</span>؟
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base">
+            قصص نجاح وتجارب حقيقية لطلابنا في طنطا وأولياء أمورهم مع مستر محمد المصري.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Review 1 -->
+          <div class="glass-card p-6 rounded-3xl border border-slate-700/80 flex flex-col justify-between hover:border-amber-400/50 transition-all">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded font-bold">الشهادة الإعدادية</span>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed">
+                "مستر محمد بجد غيّر فكرتي تماماً عن مادة العلوم! كنت بخاف جداً من مسائل الوراثة والمرايا والعدسات، لكن مع شرحه والتجارب اللي بيعملها بقيت بقفل كل امتحان والحمد لله جبت الدرجة النهائية في تالتة إعدادي!"
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800/80 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-blue-600/30 text-blue-300 font-bold flex items-center justify-center text-sm border border-blue-500/40">
+                أ.ح
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">أحمد حسام</h4>
+                <p class="text-xs text-slate-400">طالب بالصف الثالث الإعدادي - طنطا</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="glass-card p-6 rounded-3xl border border-amber-400/30 flex flex-col justify-between hover:border-amber-400/60 transition-all">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-xs bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded font-bold">ولي أمر</span>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed">
+                "بصفتي ولي أمر، أكثر ما يميز مستر محمد المصري هو الاحترام والأمانة والمتابعة المستمرة. بعد كل حصة بيوصلني تقرير بدرجة ابني وحضوره، والمستر مش بيسيب أي طالب غير وهو فاهم 100%. شكراً لحضرتك يا مستر."
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800/80 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm border border-amber-500/40">
+                م.س
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">م. سمير عبد الغني</h4>
+                <p class="text-xs text-slate-400">ولي أمر الطالبة نور - طنطا</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="glass-card p-6 rounded-3xl border border-slate-700/80 flex flex-col justify-between hover:border-amber-400/50 transition-all">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                </div>
+                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded font-bold">أولى ثانوي</span>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed">
+                "كنا تائهين في منهج العلوم المتكاملة الجديد ومكناش عارفين نذاكره ازاي، بس مستر محمد شرحه بطريقة مرتبة جداً وربط الفيزياء بالكيمياء بطريقة عبقرية. المذكرة بتاعته لوحدها تكفي لتقفيل المادة بسهولة."
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800/80 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-center text-sm border border-emerald-500/40">
+                م.ع
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">مريم علي</h4>
+                <p class="text-xs text-slate-400">طالبة بالصف الأول الثانوي</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Branches & Headquarters Section (المقرات والفروع) -->
+    <section id="location" class="py-20 relative bg-royal-900/30 border-y border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <div class="inline-flex items-center gap-2 badge-gold px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold">
+            <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+            <span>فروعنا ومقراتنا المعتمدة بطنطا</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white">
+            مقرات الحضور <span class="gold-gradient-text">والمجموعات المباشرة</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            لنوفر لطلابنا أعلى درجات الراحة والقرب، تتواجد مجموعات الأستاذ محمد المصري الحضورية في 3 مقرات رئيسية مجهزة بأحدث الشاشات التفاعلية وأجهزة التكييف وأدوات التجارب العملية في قلب طنطا.
+          </p>
+        </div>
+
+        <!-- 3 Branches Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+          <!-- Branch 1: مقر المعتصم مع الحلو -->
+          <div class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-700/80 hover:border-amber-400/80 transition-all duration-300 relative group flex flex-col justify-between hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                  <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                  <span>المقر الأول</span>
+                </span>
+                <span class="text-xs font-bold text-slate-400">طنطا</span>
+              </div>
+
+              <div>
+                <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-amber-400 transition-colors">
+                  مقر المعتصم مع الحلو
+                </h3>
+                <p class="text-slate-300 text-sm mt-1.5 flex items-start gap-1.5">
+                  <i data-lucide="navigation" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                  <span>شارع المعتصم تقاطع شارع الحلو - طنطا</span>
+                </p>
+              </div>
+
+              <div class="pt-2 space-y-2.5 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>قاعات مكيفة ومجهزة بشاشات تفاعلية</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>مواعيد صباحية ومسائية مرنة تناسب المدارس</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>متابعة حضور وامتحانات دورية أسبوعية</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-800 space-y-2.5">
+              <button 
+                type="button"
+                onclick="selectBranch('مقر المعتصم مع الحلو (طنطا)')" 
+                class="btn-gold w-full py-2.5 rounded-xl text-xs sm:text-sm font-black flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+              >
+                <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                <span>احجز مقعدك بهذا المقر</span>
+              </button>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=%D8%B7%D9%86%D8%B7%D8%A7+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D8%B5%D9%85+%D9%85%D8%B9+%D8%A7%D9%84%D8%AD%D9%84%D9%88" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white glass-card border border-slate-700/60 hover:border-amber-400/50 flex items-center justify-center gap-1.5 transition-all"
+              >
+                <i data-lucide="map" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>عرض على Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Branch 2: مقر الامبابي مع رشدي -->
+          <div class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-700/80 hover:border-amber-400/80 transition-all duration-300 relative group flex flex-col justify-between hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                  <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                  <span>المقر الثاني</span>
+                </span>
+                <span class="text-xs font-bold text-slate-400">طنطا</span>
+              </div>
+
+              <div>
+                <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-amber-400 transition-colors">
+                  مقر الامبابي مع رشدي
+                </h3>
+                <p class="text-slate-300 text-sm mt-1.5 flex items-start gap-1.5">
+                  <i data-lucide="navigation" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                  <span>شارع الإمبابي تقاطع شارع رشدي - طنطا</span>
+                </p>
+              </div>
+
+              <div class="pt-2 space-y-2.5 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>موقع حيوي وسهل الوصول بالمواصلات</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>أجهزة عرض وتجارب معملية تفاعلية</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>بيئة هادئة ومثالية للتركيز والتحصيل</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-800 space-y-2.5">
+              <button 
+                type="button"
+                onclick="selectBranch('مقر الامبابي مع رشدي (طنطا)')" 
+                class="btn-gold w-full py-2.5 rounded-xl text-xs sm:text-sm font-black flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+              >
+                <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                <span>احجز مقعدك بهذا المقر</span>
+              </button>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=%D8%B7%D9%86%D8%B7%D8%A7+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%A7%D9%84%D8%A7%D9%85%D8%A8%D8%A7%D8%A8%D9%8A+%D9%85%D8%B9+%D8%B1%D8%B4%D8%AF%D9%8A" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white glass-card border border-slate-700/60 hover:border-amber-400/50 flex items-center justify-center gap-1.5 transition-all"
+              >
+                <i data-lucide="map" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>عرض على Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Branch 3: مقر عثمان مع يوسف الصديق -->
+          <div class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-700/80 hover:border-amber-400/80 transition-all duration-300 relative group flex flex-col justify-between hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                  <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                  <span>المقر الثالث</span>
+                </span>
+                <span class="text-xs font-bold text-slate-400">طنطا</span>
+              </div>
+
+              <div>
+                <h3 class="text-xl sm:text-2xl font-black font-heading text-white group-hover:text-amber-400 transition-colors">
+                  مقر عثمان مع يوسف الصديق
+                </h3>
+                <p class="text-slate-300 text-sm mt-1.5 flex items-start gap-1.5">
+                  <i data-lucide="navigation" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                  <span>شارع عثمان محمد تقاطع يوسف الصديق - طنطا</span>
+                </p>
+              </div>
+
+              <div class="pt-2 space-y-2.5 border-t border-slate-800 text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>قريب من أهم الشوارع الحيوية بالمدينة</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>شاشات ذكية متطورة ونظام صوتي نقي</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                  <span>إشراف وتنظيم دقيق لأمن وراحة الطلاب</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-slate-800 space-y-2.5">
+              <button 
+                type="button"
+                onclick="selectBranch('مقر عثمان مع يوسف الصديق (طنطا)')" 
+                class="btn-gold w-full py-2.5 rounded-xl text-xs sm:text-sm font-black flex items-center justify-center gap-2 cursor-pointer shadow-lg"
+              >
+                <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                <span>احجز مقعدك بهذا المقر</span>
+              </button>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=%D8%B7%D9%86%D8%B7%D8%A7+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%B9%D8%AB%D9%85%D8%A7%D9%86+%D9%85%D8%B9+%D9%8A%D9%88%D8%B3%D9%81+%D8%A7%D9%84%D8%B5%D8%AF%D9%8A%D9%82" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full py-2 rounded-xl text-xs font-bold text-slate-300 hover:text-white glass-card border border-slate-700/60 hover:border-amber-400/50 flex items-center justify-center gap-1.5 transition-all"
+              >
+                <i data-lucide="map" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>عرض على Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Map & Quick Info Banner -->
+        <div class="glass-card p-5 sm:p-8 rounded-3xl border border-slate-700/80 shadow-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Direct Info & Quick Switcher -->
+            <div class="lg:col-span-5 space-y-5 text-right">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/15 text-blue-400 border border-blue-500/30">
+                <i data-lucide="info" class="w-3.5 h-3.5"></i>
+                <span>خريطة ومواقع مقرات طنطا</span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-black font-heading text-white">
+                جميع المقرات مجهزة بأعلى المعايير
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                تطبق نفس الخطة التعليمية وجداول الامتحانات والمتابعة في جميع المقرات الثلاثة، مع إمكانية التحويل بين المجموعات والمقرات بالتنسيق مع الإدارة.
+              </p>
+              
+              <div class="space-y-3 pt-1">
+                <div class="flex items-center gap-3 text-slate-200 text-xs sm:text-sm">
+                  <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <span class="block text-slate-400 text-[11px]">للاستفسار وتنسيق المواعيد:</span>
+                    <span class="dir-ltr text-right font-black text-white tracking-wider">0100 813 5310</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 text-slate-200 text-xs sm:text-sm">
+                  <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <span class="block text-slate-400 text-[11px]">مواعيد العمل والاستقبال:</span>
+                    <span class="text-white font-bold">يومياً من 9:00 صباحاً حتى 9:00 مساءً</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map Selector Tabs -->
+              <div class="pt-2">
+                <span class="block text-xs font-bold text-slate-300 mb-2">عرض المقر على الخريطة:</span>
+                <div class="flex flex-wrap gap-2">
+                  <button type="button" onclick="switchMapBranch('moatasem')" id="tab-moatasem" class="branch-map-tab active px-3.5 py-2 rounded-xl text-xs font-black bg-amber-500 text-royal-950 transition-all cursor-pointer shadow-md">
+                    المعتصم مع الحلو
+                  </button>
+                  <button type="button" onclick="switchMapBranch('embabi')" id="tab-embabi" class="branch-map-tab px-3.5 py-2 rounded-xl text-xs font-bold glass-card text-slate-300 hover:text-white border border-slate-700 transition-all cursor-pointer">
+                    الامبابي مع رشدي
+                  </button>
+                  <button type="button" onclick="switchMapBranch('othman')" id="tab-othman" class="branch-map-tab px-3.5 py-2 rounded-xl text-xs font-bold glass-card text-slate-300 hover:text-white border border-slate-700 transition-all cursor-pointer">
+                    عثمان مع يوسف الصديق
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="lg:col-span-7">
+              <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden relative border border-slate-700/80 shadow-2xl">
+                <iframe 
+                  id="branches-map-iframe"
+                  title="خريطة مقرات طنطا - أ. محمد المصري"
+                  src="https://maps.google.com/maps?q=طنطا+شارع+المعتصم+مع+الحلو&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full h-full filter saturate-150 contrast-125 transition-opacity duration-300"
+                ></iframe>
+                
+                <div id="branch-map-badge" class="absolute bottom-3 right-3 glass-card px-3.5 py-1.5 rounded-lg text-xs font-bold text-amber-300 border border-amber-500/30 flex items-center gap-1.5 pointer-events-none shadow-lg">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                  <span id="branch-map-badge-text">مقر المعتصم مع الحلو - طنطا</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6.5. FAQ Section (الأسئلة الشائعة) -->
+    <section id="faq" class="py-20 relative bg-royal-900/20 border-b border-slate-800">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <div class="inline-flex items-center gap-2 badge-gold px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold">
+            <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i>
+            <span>إجابات فورية لكل استفساراتكم</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white">
+            الأسئلة <span class="gold-gradient-text">الشائعة والأكثر تكراراً</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            جمعنا لكم أهم إجابات الأسئلة التي يطرحها الطلاب وأولياء الأمور حول الحجز والمقرات وطريقة الشرح والمتابعة.
+          </p>
+        </div>
+
+        <!-- FAQ Accordion List -->
+        <div class="space-y-4">
+
+          <!-- FAQ Item 1 -->
+          <div class="faq-item glass-card rounded-2xl border border-slate-700/80 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+            <div class="p-5 sm:p-6 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="calendar" class="w-4 h-4"></i>
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  هل يمكن للطالب حضور حصة تجريبية قبل تأكيد الاشتراك؟
+                </h3>
+              </div>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0"></i>
+            </div>
+            <div class="faq-answer px-5 sm:px-6 pb-5 pt-0 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 mt-1">
+              نعم بكل تأكيد! نوفر للطالب إمكانية حضور حصة أولى تجريبية للتعرف على أسلوب مستر محمد المصري في الشرح والتفاعل داخل القاعة، وتجربة الأجواء التعليمية قبل إتمام الحجز النهائي.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item glass-card rounded-2xl border border-slate-700/80 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+            <div class="p-5 sm:p-6 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  ما الفرق بين المقرات الثلاثة في طنطا (المعتصم / الإمبابي / عثمان)؟
+                </h3>
+              </div>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0"></i>
+            </div>
+            <div class="faq-answer px-5 sm:px-6 pb-5 pt-0 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 mt-1">
+              جميع المقرات الثلاثة متطابقة تماماً في جودة التجهيز (قاعات مكيفة، شاشات عرض ذكية، أدوات معملية)، ويشرح بها أ. محمد المصري بنفسه بنفس الخطة والامتحانات والملازم. اختر المقر الأقرب لمحل سكنك أو مدرستك.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item glass-card rounded-2xl border border-slate-700/80 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+            <div class="p-5 sm:p-6 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="bell" class="w-4 h-4"></i>
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  كيف يتم إبلاغ ولي الأمر بدرجات وغياب الطالب؟
+                </h3>
+              </div>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0"></i>
+            </div>
+            <div class="faq-answer px-5 sm:px-6 pb-5 pt-0 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 mt-1">
+              لدينا فريق متابعة متخصص يسجل الحضور والغياب مع بداية كل حصة، وتُرسل رسالة فورية عبر الواتساب لولي الأمر، بالإضافة لتقرير أسبوعي بدرجة الامتحان الدوري وملاحظات المستر على أداء الطالب.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item glass-card rounded-2xl border border-slate-700/80 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+            <div class="p-5 sm:p-6 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="laptop" class="w-4 h-4"></i>
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  هل يمكن الجمع بين الحضور بالسنتر والبث الأونلاين في حال الغياب؟
+                </h3>
+              </div>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0"></i>
+            </div>
+            <div class="faq-answer px-5 sm:px-6 pb-5 pt-0 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 mt-1">
+              نعم، في حال تعرض الطالب لأي ظرف طارئ منعه من الحضور في مقره، نوفر له إمكانية تعويض الحصة عبر تسجيل فيديو عالي الجودة أو في مقر آخر من المقرات الثلاثة بالتنسيق المسبق مع الإدارة حتى لا يفوته أي درس.
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item glass-card rounded-2xl border border-slate-700/80 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+            <div class="p-5 sm:p-6 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="layers" class="w-4 h-4"></i>
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  ما هي الصفوف الدراسية المتاحة حالياً للحجز؟
+                </h3>
+              </div>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0"></i>
+            </div>
+            <div class="faq-answer px-5 sm:px-6 pb-5 pt-0 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 mt-1">
+              متاح حالياً الحجز لجميع صفوف المرحلة الإعدادية (الأول، الثاني، والثالث الإعدادي - مادة العلوم)، بالإضافة إلى الصف الأول الثانوي (منهج العلوم المتكاملة Integrated Science الجديد 2025/2026).
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item glass-card rounded-2xl border border-slate-700/80 overflow-hidden cursor-pointer" onclick="toggleFaq(this)">
+            <div class="p-5 sm:p-6 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </span>
+                <h3 class="text-base sm:text-lg font-bold text-white">
+                  كيف يتم تأكيد الحجز بعد ملء النموذج على الموقع؟
+                </h3>
+              </div>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 flex-shrink-0"></i>
+            </div>
+            <div class="faq-answer px-5 sm:px-6 pb-5 pt-0 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 mt-1">
+              بمجرد الضغط على زر "إرسال وتأكيد الحجز فوراً عبر واتساب"، ينتقل طلبكم تلقائياً إلى واتساب أ. محمد المصري، ويقوم فريق العمل بالتواصل معكم خلال وقت وجيز لتأكيد الموعد والمقر وتسليم كود الطالب.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Help Action Box -->
+        <div class="mt-10 p-6 glass-card rounded-3xl border border-amber-500/30 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-right">
+            <h4 class="text-base font-bold text-white">لديك سؤال آخر لم تجد إجابته هنا؟</h4>
+            <p class="text-xs text-slate-400">تواصل معنا مباشرة وسيجيب مستر محمد وفريق العمل فوراً على كل استفساراتك.</p>
+          </div>
+          <a href="https://wa.me/201010081353?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%B9%D9%84%D9%8A%D9%83%D9%85+%D9%8يا+%D9%85%D8%B3%D8%AA%D8%B1+%D9%85%D8%AD%D9%85%D8%AF%D8%8C+%D9%84%D8%AF%D9%8A+%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1+%D8%AE%D8%A7%D8%B5" target="_blank" rel="noopener noreferrer" class="btn-royal px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 flex-shrink-0">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>محادثة واتساب مباشرة</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Booking Form Section with WhatsApp Integration (نموذج الحجز والتكامل البرمجي) -->
+    <section id="booking-section" class="py-24 relative overflow-hidden">
+      <!-- Glow Effects -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center space-y-3 mb-12">
+          <div class="inline-flex items-center gap-1.5 badge-gold px-4 py-1 rounded-full text-xs font-bold">
+            <i data-lucide="clipboard-pen" class="w-3.5 h-3.5"></i>
+            <span>تأكيد الحجز الفوري</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white">
+            احجز مكانك الآن مع <span class="gold-gradient-text">أ. محمد المصري</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+            املأ بياناتك أدناه واضغط "إرسال وتأكيد عبر واتساب" ليتم تحويلك مباشرة برسالة منسقة إلى هاتف المستر <strong class="text-amber-400">01010081353</strong> لتأكيد الموعد فوراً.
+          </p>
+        </div>
+
+        <!-- Main Form Glass Card -->
+        <div class="glass-card rounded-3xl p-6 sm:p-10 border border-amber-400/30 shadow-2xl">
+          
+          <form id="booking-form" class="space-y-6 text-right">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- 1. Student Name -->
+              <div class="space-y-2">
+                <label for="student-name" class="block text-sm font-bold text-slate-200">
+                  <span>اسم الطالب ثلاثي</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <div class="relative">
+                  <input 
+                    type="text" 
+                    id="student-name" 
+                    name="student-name" 
+                    required 
+                    placeholder="مثال: أحمد محمد علي" 
+                    class="form-input pr-11"
+                  >
+                  <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Grade Selection -->
+              <div class="space-y-2">
+                <label for="student-grade" class="block text-sm font-bold text-slate-200">
+                  <span>الصف الدراسي</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <div class="relative">
+                  <select 
+                    id="student-grade" 
+                    name="student-grade" 
+                    required 
+                    class="form-input pr-11 appearance-none cursor-pointer bg-royal-900"
+                  >
+                    <option value="" disabled selected>اختر المرحلة الدراسية...</option>
+                    <option value="الصف الأول الإعدادي (علوم)">الصف الأول الإعدادي (علوم)</option>
+                    <option value="الصف الثاني الإعدادي (علوم)">الصف الثاني الإعدادي (علوم)</option>
+                    <option value="الصف الثالث الإعدادي (الشهادة الإعدادية)">الصف الثالث الإعدادي (الشهادة الإعدادية)</option>
+                    <option value="الصف الأول الثانوي (علوم متكاملة)">الصف الأول الثانوي (علوم متكاملة - Integrated Sciences)</option>
+                  </select>
+                  <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                  </div>
+                  <div class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Student Phone -->
+              <div class="space-y-2">
+                <label for="student-phone" class="block text-sm font-bold text-slate-200">
+                  <span>رقم هاتف الطالب (واتساب)</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <div class="relative">
+                  <input 
+                    type="tel" 
+                    id="student-phone" 
+                    name="student-phone" 
+                    required 
+                    placeholder="010XXXXXXXX" 
+                    class="form-input pr-11 dir-ltr text-right"
+                  >
+                  <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Parent Phone -->
+              <div class="space-y-2">
+                <label for="parent-phone" class="block text-sm font-bold text-slate-200">
+                  <span>رقم هاتف ولي الأمر</span>
+                  <span class="text-amber-400">*</span>
+                </label>
+                <div class="relative">
+                  <input 
+                    type="tel" 
+                    id="parent-phone" 
+                    name="parent-phone" 
+                    required 
+                    placeholder="01XXXXXXXXX" 
+                    class="form-input pr-11 dir-ltr text-right"
+                  >
+                  <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Attendance Mode Radios -->
+            <div class="space-y-2 pt-2">
+              <label class="block text-sm font-bold text-slate-200">طريقة الحضور واختيار المقر:</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <label class="glass-card p-3 rounded-xl border border-slate-700 cursor-pointer flex items-center gap-2.5 hover:border-amber-400 transition-colors">
+                  <input type="radio" name="attendance_mode" value="مقر المعتصم مع الحلو (طنطا)" checked class="accent-amber-500 w-4 h-4">
+                  <div class="text-right">
+                    <span class="block text-xs sm:text-sm font-bold text-white">مقر المعتصم مع الحلو</span>
+                    <span class="block text-[11px] text-amber-300">طنطا - المعتصم والحلو</span>
+                  </div>
+                </label>
+                <label class="glass-card p-3 rounded-xl border border-slate-700 cursor-pointer flex items-center gap-2.5 hover:border-amber-400 transition-colors">
+                  <input type="radio" name="attendance_mode" value="مقر الامبابي مع رشدي (طنطا)" class="accent-amber-500 w-4 h-4">
+                  <div class="text-right">
+                    <span class="block text-xs sm:text-sm font-bold text-white">مقر الامبابي مع رشدي</span>
+                    <span class="block text-[11px] text-amber-300">طنطا - الإمبابي ورشدي</span>
+                  </div>
+                </label>
+                <label class="glass-card p-3 rounded-xl border border-slate-700 cursor-pointer flex items-center gap-2.5 hover:border-amber-400 transition-colors">
+                  <input type="radio" name="attendance_mode" value="مقر عثمان مع يوسف الصديق (طنطا)" class="accent-amber-500 w-4 h-4">
+                  <div class="text-right">
+                    <span class="block text-xs sm:text-sm font-bold text-white">مقر عثمان مع يوسف الصديق</span>
+                    <span class="block text-[11px] text-amber-300">طنطا - عثمان ويوسف الصديق</span>
+                  </div>
+                </label>
+                <label class="glass-card p-3 rounded-xl border border-slate-700 cursor-pointer flex items-center gap-2.5 hover:border-amber-400 transition-colors">
+                  <input type="radio" name="attendance_mode" value="أونلاين عبر المنصة والبث المباشر" class="accent-amber-500 w-4 h-4">
+                  <div class="text-right">
+                    <span class="block text-xs sm:text-sm font-bold text-white">أونلاين (عن بعد)</span>
+                    <span class="block text-[11px] text-slate-400">بث مباشر ومتابعة رقمية</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="space-y-2">
+              <label for="student-notes" class="block text-sm font-bold text-slate-200">
+                <span>ملاحظات أو استفسار (اختياري)</span>
+              </label>
+              <textarea 
+                id="student-notes" 
+                rows="2" 
+                placeholder="هل لديك أي استفسار حول المواعيد أو المجموعات؟" 
+                class="form-input"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button (Calls Integration Function) -->
+            <div class="pt-4">
+              <button 
+                type="submit" 
+                class="btn-gold w-full py-4 rounded-2xl text-base sm:text-lg font-black font-heading flex items-center justify-center gap-3 shadow-2xl cursor-pointer group"
+              >
+                <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span>إرسال وتأكيد الحجز فوراً عبر واتساب</span>
+              </button>
+            </div>
+
+            <div class="text-center text-xs text-slate-400 flex items-center justify-center gap-1.5 pt-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+              <span>بياناتك محفوظة بسرية تامة وسيتم إرسالها لمستر محمد المصري مباشرة (+201010081353)</span>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8. Footer Section -->
+  <footer class="bg-royal-950 border-t border-slate-800/80 pt-16 pb-12 relative z-10 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Teacher Brand -->
+        <div class="lg:col-span-5 space-y-4 text-right">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
+              <img src="teacher.jpg" alt="أ. محمد المصري" class="w-full h-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80'">
+            </div>
+            <div>
+              <h3 class="text-xl font-black font-heading text-white">أ. محمد المصري</h3>
+              <p class="text-xs text-amber-400 font-semibold">العلوم والمصري - معاً لتحقيق الأفضل</p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+            أستاذ العلوم للمرحلة الإعدادية والعلوم المتكاملة للمرحلة الثانوية. نسعى دائماً لتبسيط المعلومة وبناء جيل متفوق يعشق العلوم ويحقق أعلى الدرجات.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <!-- Social Links -->
+            <a href="https://wa.me/201010081353" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-[#25D366] text-white flex items-center justify-center hover:bg-[#20ba5a] transition-all shadow-md" aria-label="واتساب مستر محمد">
+              <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </a>
+            <a href="tel:01010081353" class="w-9 h-9 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all" aria-label="اتصال هاتفي">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center hover:bg-amber-500 hover:text-royal-950 transition-all" aria-label="فيسبوك">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all" aria-label="يوتيوب">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="lg:col-span-3 space-y-3 text-right">
+          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider text-amber-400">روابط سريعة</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#hero" class="hover:text-amber-400 transition-colors">الصفحة الرئيسية</a></li>
+            <li><a href="#about" class="hover:text-amber-400 transition-colors">عن أ. محمد المصري</a></li>
+            <li><a href="#courses" class="hover:text-amber-400 transition-colors">المراحل والكورسات</a></li>
+            <li><a href="#excellence" class="hover:text-amber-400 transition-colors">لوحة التميز وتطور الدرجات</a></li>
+            <li><a href="#booking-section" class="hover:text-amber-400 transition-colors">نموذج الحجز المباشر</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact & Academy Info -->
+        <div class="lg:col-span-4 space-y-3 text-right">
+          <h4 class="text-sm font-bold font-heading text-white uppercase tracking-wider text-amber-400">فروعنا ومقراتنا المعتمدة بطنطا</h4>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <p class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+              <span>مقر المعتصم مع الحلو (طنطا)</span>
+            </p>
+            <p class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+              <span>مقر الامبابي مع رشدي (طنطا)</span>
+            </p>
+            <p class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+              <span>مقر عثمان مع يوسف الصديق (طنطا)</span>
+            </p>
+            <div class="pt-2 border-t border-slate-800 space-y-2">
+              <p class="flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+                <span class="dir-ltr text-right font-black text-white tracking-wider">+20 101 008 1353</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <i data-lucide="message-square" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                <span>واتساب متاح للحجز والاستفسار الفوري</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+        <p>© 2025 - 2026 جميع الحقوق محفوظة لمنصة "العلوم والمصري" للأستاذ محمد المصري.</p>
+        <p class="flex items-center gap-1">
+          <span>صُممت بأعلى معايير الإتقان والتكنولوجيا الحديثة</span>
+          <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-500 fill-rose-500"></i>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 9. Floating WhatsApp Interactive Button (Pure Green + Real WhatsApp Logo + Teacher Direct Phone) -->
+  <div class="fixed bottom-6 left-6 z-50 flex items-center gap-2.5">
+    
+    <!-- Direct Phone Tag Pill (Always visible on desktop & tablet) -->
+    <a 
+      href="https://wa.me/201010081353" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="hidden sm:flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-2.5 rounded-2xl shadow-2xl transition-all duration-300 border border-white/25 group cursor-pointer"
+      title="محادثة واتساب مباشرة مع أ. محمد المصري"
+    >
+      <div class="text-right">
+        <span class="block text-[11px] font-bold text-white/95 leading-tight">واتساب أ. محمد المصري</span>
+        <span class="block text-xs font-black dir-ltr text-left tracking-wider text-white">0101 008 1353</span>
+      </div>
+      <span class="w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+    </a>
+
+    <!-- The Authentic WhatsApp Circular Button -->
+    <button 
+      id="floating-whatsapp-btn" 
+      aria-label="تواصل واتساب مع أ. محمد المصري 01010081353"
+      class="w-14 h-14 rounded-full flex items-center justify-center shadow-2xl bg-[#25D366] hover:bg-[#20ba5a] text-white transition-all duration-300 hover:scale-110 active:scale-95 animate-pulse-glow"
+      style="background-color: #25D366 !important;"
+    >
+      <!-- Real Authentic Official WhatsApp SVG Logo -->
+      <svg class="w-8 h-8 fill-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Floating Back to Top Button (Smooth Return to Hero) -->
+  <button 
+    id="back-to-top-btn" 
+    aria-label="الرجوع إلى أعلى الصفحة"
+    title="الرجوع إلى أعلى الصفحة"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+  >
+    <i data-lucide="chevron-up" class="w-6 h-6"></i>
+  </button>
+
+  <!-- 10. Mobile Bottom Quick Action Bar (Only on small screens) -->
+  <div class="fixed bottom-0 inset-x-0 z-40 sm:hidden glass-header border-t border-slate-800 p-2.5 flex items-center justify-around gap-2 shadow-2xl">
+    <a href="tel:01010081353" class="flex-1 py-2 rounded-xl glass-card text-center text-xs font-bold text-white flex items-center justify-center gap-1.5 border border-slate-700">
+      <i data-lucide="phone" class="w-4 h-4 text-blue-400"></i>
+      <span>اتصال</span>
+    </a>
+    <a href="#booking-section" class="flex-[1.5] py-2 rounded-xl btn-gold text-center text-xs font-black flex items-center justify-center gap-1.5 shadow-md">
+      <i data-lucide="check-circle" class="w-4 h-4"></i>
+      <span>احجز الآن</span>
+    </a>
+    <button onclick="document.getElementById('floating-whatsapp-btn').click()" class="flex-1 py-2 rounded-xl text-center text-xs font-bold text-white flex items-center justify-center gap-1.5 shadow-md bg-[#25D366] hover:bg-[#20ba5a]" style="background-color: #25D366 !important;">
+      <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+      <span>واتساب</span>
+    </button>
+  </div>
+
+  <!-- 11. Student Login / Profile Modal Dialog -->
+  <div id="login-modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-amber-400/40 shadow-2xl relative text-right space-y-5 animate-scale-up">
+      
+      <!-- Close Button -->
+      <button id="close-login-btn" class="absolute top-5 left-5 w-8 h-8 rounded-full glass-card text-slate-400 hover:text-white flex items-center justify-center border border-slate-700">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+          <i data-lucide="user-check" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-black font-heading text-white">تسجيل بيانات الطالب</h3>
+          <p class="text-xs text-amber-400">لحفظ بياناتك وتسهيل الحجز والتواصل التلقائي</p>
+        </div>
+      </div>
+
+      <!-- Modal Form -->
+      <form id="student-login-form" class="space-y-4">
+        
+        <div class="space-y-1.5">
+          <label for="login-name" class="block text-xs font-bold text-slate-300">اسم الطالب</label>
+          <input type="text" id="login-name" required placeholder="اكتب اسمك ثلاثي" class="form-input text-sm">
+        </div>
+
+        <div class="space-y-1.5">
+          <label for="login-phone" class="block text-xs font-bold text-slate-300">رقم هاتف الطالب</label>
+          <input type="tel" id="login-phone" required placeholder="010XXXXXXXX" class="form-input text-sm dir-ltr text-right">
+        </div>
+
+        <div class="space-y-1.5">
+          <label for="login-parent-phone" class="block text-xs font-bold text-slate-300">رقم ولي الأمر (اختياري)</label>
+          <input type="tel" id="login-parent-phone" placeholder="01XXXXXXXXX" class="form-input text-sm dir-ltr text-right">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="btn-gold w-full py-3 rounded-xl font-bold font-heading text-sm flex items-center justify-center gap-2">
+            <i data-lucide="save" class="w-4 h-4"></i>
+            <span>حفظ البيانات في المتصفح</span>
+          </button>
+        </div>
+
+        <p class="text-[11px] text-slate-400 text-center">
+          * يتم تخزين بياناتك محلياً في جهازك لتسهيل حجز الكورسات دون إعادة كتابتها في كل مرة.
+        </p>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
