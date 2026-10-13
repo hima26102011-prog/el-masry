@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hima26102011-prog.github.io/el-masry/sitemap.xml
