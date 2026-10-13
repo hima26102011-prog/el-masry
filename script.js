@@ -526,9 +526,7 @@ function initBookingForm() {
     showToast("جاري توجيهك إلى الواتساب لإرسال تفاصيل الحجز مباشرة...", "success");
     playNotificationSound();
 
-    setTimeout(() => {
-      window.open(whatsappUrl, "_blank");
-    }, 400);
+    window.location.href = whatsappUrl;
   });
 }
 
@@ -607,9 +605,9 @@ function initFloatingWhatsApp() {
   const heroWhatsappBtn = document.getElementById("hero-whatsapp-btn");
   const floatingWhatsappBtn = document.getElementById("floating-whatsapp-btn");
 
-  function openDirectWhatsApp(contextMessage) {
+  function handleWhatsAppClick(btn, source) {
     let message = "";
-    if (AppState.student.name) {
+    if (AppState.student && AppState.student.name) {
       message = 
 `السلام عليكم ورحمة الله وبركاته يا مستر محمد المصري 🧪
 أنا الطالب: ${AppState.student.name}
@@ -626,15 +624,18 @@ ${AppState.student.parentPhone ? `رقم ولي الأمر: ${AppState.student.p
     if (typeof gtag === "function") {
       gtag("event", "contact", { method: "WhatsApp", button_source: source });
     }
-    window.open(url, "_blank");
+
+    if (btn) {
+      btn.href = url;
+    }
   }
 
   if (heroWhatsappBtn) {
-    heroWhatsappBtn.addEventListener("click", () => openDirectWhatsApp("hero"));
+    heroWhatsappBtn.addEventListener("click", () => handleWhatsAppClick(heroWhatsappBtn, "hero"));
   }
 
   if (floatingWhatsappBtn) {
-    floatingWhatsappBtn.addEventListener("click", () => openDirectWhatsApp("floating"));
+    floatingWhatsappBtn.addEventListener("click", () => handleWhatsAppClick(floatingWhatsappBtn, "floating"));
   }
 }
 
